@@ -74,8 +74,9 @@ checkmarx-scan:
     entrypoint: ['']
   variables:
     CHECKMARX_INCREMENTAL: "false"
+  before_script:
+    - echo "This is the before"
   script:
-    - echo 'hello'
     - ${CX_FLOW_EXE}
           --scan 
           --app="${CI_PROJECT_NAME}" 
@@ -88,7 +89,8 @@ checkmarx-scan:
           --spring.profiles.active="${CX_FLOW_ENABLED_VULNERABILITY_SCANNERS}" 
           --f=. 
           ${PARAMS}
-    - cat /app/flow.log
+   after_script:
+     - echo "This is the after"
 
 checkmarx-scan-mr:
   stage: test
