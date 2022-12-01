@@ -87,6 +87,7 @@ checkmarx-scan:
           --spring.profiles.active="${CX_FLOW_ENABLED_VULNERABILITY_SCANNERS}" 
           --f=. 
           ${PARAMS}
+    - cat /app/flow.log
 
 checkmarx-scan-mr:
   stage: test
