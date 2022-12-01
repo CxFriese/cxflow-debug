@@ -142,3 +142,4 @@ checkmarx-scan-security-dashboard-on-mr:
     reports:
       sast: gl-sast-report.json
       dependency_scanning: gl-dependency-scanning-report.json
+      error_log: flow.log
