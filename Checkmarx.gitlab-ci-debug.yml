@@ -74,6 +74,8 @@ checkmarx-scan:
     entrypoint: ['']
   variables:
     CHECKMARX_INCREMENTAL: "false"
+  before_script:
+    - echo "before"
   script:
     - ${CX_FLOW_EXE}
           --scan 
@@ -125,8 +127,6 @@ checkmarx-scan-security-dashboard-on-mr:
   variables:
       CX_FLOW_BUG_TRACKER: "GitLabDashboard"
       CX_FLOW_BUG_TRACKER_IMPL: ${CX_FLOW_BUG_TRACKER}
-  before_script:
-    - echo "before"
   script:
     - ${CX_FLOW_EXE}
           --project
