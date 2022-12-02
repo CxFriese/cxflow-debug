@@ -91,7 +91,7 @@ checkmarx-scan:
           --f=. 
           ${PARAMS}
   after_script:
-    - cat /app/cx-flog.log
+    - cat /app/cx-flow.log
 checkmarx-scan-mr:
   stage: test
   rules:
