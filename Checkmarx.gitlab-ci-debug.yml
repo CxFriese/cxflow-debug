@@ -76,7 +76,7 @@ checkmarx-scan:
   variables:
     CHECKMARX_INCREMENTAL: "false"
   before_script:
-    - echo "before"
+    - echo ${CX_FLOW_EXE}
   script:
     - ${CX_FLOW_EXE}
           --scan 
