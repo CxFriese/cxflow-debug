@@ -91,9 +91,9 @@ checkmarx-scan:
           --f=. 
           ${PARAMS}
   after_script:
-    - wget https://download.checkmarx.com/9.4.0_GA/Plugins/CxConsolePlugin-1.1.14.zip
+    - wget https://download.checkmarx.com/9.4.0_GA/Plugins/CxConsolePlugin-1.1.11.zip
     - apk add py3-pip
-    - unzip CxConsolePlugin-1.1.14.zip
+    - unzip CxConsolePlugin-1.1.11.zip
     - ls
     - ./runCxConsole.sh
         OsaScan
