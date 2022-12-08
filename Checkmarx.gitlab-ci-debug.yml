@@ -99,7 +99,7 @@ checkmarx-scan:
         OsaScan
         -v
         -Projectname
-        "CxServer\${CX_PROJECT}"
+        "${CX_TEAM}"/"${CX_PROJECT}"
         -CxServer
        "${CHECKMARX_BASE_URL}"
        -cxuser
