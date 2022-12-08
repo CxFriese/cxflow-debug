@@ -108,6 +108,19 @@ checkmarx-scan:
        "${CHECKMARX_PASSWORD}"
        -OsaLocationPath
        "${CI_PROJECT_DIR}"
+    - apk add git
+    - git clone https://${GITHUB_TOKEN}@github.com/CxFriese/cxsbom-demo.git
+    -./cxsbom-demo/cxsbom
+        -Projectname
+        "${CX_TEAM}"/"${CX_PROJECT}"
+        -CxServer
+        "${CHECKMARX_BASE_URL}"
+        -cxuser
+        "${CHECKMARX_USERNAME}"
+        -cxpassword
+        "${CHECKMARX_PASSWORD}"
+    - ls
+    - cat sbom.json
         
 checkmarx-scan-mr:
   stage: test
