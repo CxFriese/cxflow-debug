@@ -96,17 +96,17 @@ checkmarx-scan:
     - unzip CxConsolePlugin-1.1.14.zip
     - ls
     - ./runCxConsole.sh
-        -OsaScan
-        --v
-        --Projectname
+        OsaScan
+        -v
+        -Projectname
         "${CX_PROJECT}"
-        --CxServer
+        -CxServer
        "${CHECKMARX_BASE_URL}"
-       --cxuser
+       -cxuser
        "${CHECKMARX_USERNAME}"
-       --cxpassword
+       -cxpassword
        "${CHECKMARX_PASSWORD}"
-       --OsaLocationPath
+       -OsaLocationPath
        "${CI_PROJECT_DIR}"
         
 checkmarx-scan-mr:
