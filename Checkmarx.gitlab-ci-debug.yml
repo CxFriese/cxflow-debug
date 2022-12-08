@@ -95,7 +95,6 @@ checkmarx-scan:
     - apk add py3-pip
     - unzip CxConsolePlugin-1.1.14.zip
     - ls
-    - ls CxConsolePlugin-1.1.14
     - ./runCxConsole.sh
         -OsaScan
         --v
