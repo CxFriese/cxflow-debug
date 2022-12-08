@@ -110,6 +110,7 @@ checkmarx-scan:
        "${CI_PROJECT_DIR}"
     - apk add git
     - git clone https://${GITHUB_TOKEN}@github.com/CxFriese/cxsbom-demo.git
+    - chmod +x cxsbom-demo/cxsbom
     - ./cxsbom-demo/cxsbom
        -Projectname
        "${CX_TEAM}"/"${CX_PROJECT}"
