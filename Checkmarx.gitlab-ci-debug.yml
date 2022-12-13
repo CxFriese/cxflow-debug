@@ -110,6 +110,7 @@ checkmarx-scan:
        -OsaLocationPath
        "${CI_PROJECT_DIR}"
     - apk add git
+    - apk add file
     - git clone https://${GITHUB_TOKEN}@github.com/CxFriese/cxsbom-demo.git
     - chmod +x cxsbom-demo/cxsbom
     - ls
