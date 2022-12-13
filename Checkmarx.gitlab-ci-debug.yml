@@ -120,7 +120,7 @@ checkmarx-scan:
        --project
        "${CX_TEAM}"/"${CX_PROJECT}"
        --server
-       "${CHECKMARX_BASE_URL}"
+       "${CHECKMARX_SBOM_URL}"
        --username
        "${CHECKMARX_USERNAME}"
        --password
