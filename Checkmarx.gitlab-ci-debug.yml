@@ -114,6 +114,7 @@ checkmarx-scan:
     - chmod +x cxsbom-demo/cxsbom
     - ls
     - ls cxsbom-demo
+    - file cxsbom-demo/cxsbom
     - ./cxsbom-demo/cxsbom
        --project
        "${CX_TEAM}"/"${CX_PROJECT}"
