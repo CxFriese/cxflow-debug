@@ -118,7 +118,7 @@ checkmarx-scan:
     - file cxsbom-demo/cxsbom
     - ./cxsbom-demo/cxsbom
        --project
-       "${CX_TEAM}"/"${CX_PROJECT}"
+       "${CX_PROJECT}"
        --server
        "${CHECKMARX_SBOM_URL}"
        --username
