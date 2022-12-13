@@ -128,7 +128,10 @@ checkmarx-scan:
        --scan-id
        "4a847d9e-ea9d-437e-ba25-104a6b65cd9f"
     - cat sbom.json
-        
+  artifacts:
+    paths: 
+      - sbom.json
+      
 checkmarx-scan-mr:
   stage: test
   rules:
