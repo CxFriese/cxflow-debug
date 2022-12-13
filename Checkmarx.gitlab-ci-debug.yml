@@ -115,14 +115,16 @@ checkmarx-scan:
     - ls
     - ls cxsbom-demo
     - ./cxsbom-demo/cxsbom
-       -Projectname
+       --project
        "${CX_TEAM}"/"${CX_PROJECT}"
-       -CxServer
+       --server
        "${CHECKMARX_BASE_URL}"
-       -cxuser
+       --username
        "${CHECKMARX_USERNAME}"
-       -cxpassword
+       --password
        "${CHECKMARX_PASSWORD}"
+       --scan-id
+       "4a847d9e-ea9d-437e-ba25-104a6b65cd9f"
     - cat sbom.json
         
 checkmarx-scan-mr:
