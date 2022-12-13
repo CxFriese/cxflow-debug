@@ -95,7 +95,6 @@ checkmarx-scan:
     - wget https://download.checkmarx.com/9.4.0_GA/Plugins/CxConsolePlugin-1.1.11.zip
     - apk add py3-pip
     - unzip CxConsolePlugin-1.1.11.zip
-    - ls
     - ./runCxConsole.sh
         OsaScan
         -v
@@ -113,9 +112,6 @@ checkmarx-scan:
     - apk add file
     - git clone https://${GITHUB_TOKEN}@github.com/CxFriese/cxsbom-demo.git
     - chmod +x cxsbom-demo/cxsbom
-    - ls
-    - ls cxsbom-demo
-    - file cxsbom-demo/cxsbom
     - ./cxsbom-demo/cxsbom
        --project
        "${CX_PROJECT}"
@@ -127,7 +123,6 @@ checkmarx-scan:
        "${CHECKMARX_PASSWORD}"
        --scan-id
        "4a847d9e-ea9d-437e-ba25-104a6b65cd9f"
-    - cat sbom.json
   artifacts:
     paths: 
       - sbom.json
