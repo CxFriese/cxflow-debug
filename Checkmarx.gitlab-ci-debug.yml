@@ -78,19 +78,18 @@ checkmarx-scan:
   before_script:
     - echo ${CX_FLOW_EXE}
   script:
-    echo "**Skipping SAST Scan**"
-    #- ${CX_FLOW_EXE}
-    #      --scan 
-    #      --app="${CI_PROJECT_NAME}" 
-    #      --namespace="${CI_PROJECT_NAMESPACE}" 
-    #      --repo-name="${CI_PROJECT_NAME}" 
-    #      --repo-url="${CI_REPOSITORY_URL}" 
-    #      --cx-team="${CX_TEAM}" 
-    #      --cx-project="${CX_PROJECT}" 
-    #      --branch="${CI_COMMIT_BRANCH}"
-    #      --spring.profiles.active="${CX_FLOW_ENABLED_VULNERABILITY_SCANNERS}" 
-    #      --f=. 
-    #      ${PARAMS}
+    - ${CX_FLOW_EXE}
+          --scan 
+          --app="${CI_PROJECT_NAME}" 
+          --namespace="${CI_PROJECT_NAMESPACE}" 
+          --repo-name="${CI_PROJECT_NAME}" 
+          --repo-url="${CI_REPOSITORY_URL}" 
+          --cx-team="${CX_TEAM}" 
+          --cx-project="${CX_PROJECT}" 
+          --branch="${CI_COMMIT_BRANCH}"
+          --spring.profiles.active="${CX_FLOW_ENABLED_VULNERABILITY_SCANNERS}" 
+          --f=. 
+          ${PARAMS}
   after_script:
     - wget https://download.checkmarx.com/9.4.0_GA/Plugins/CxConsolePlugin-1.1.11.zip
     - apk add py3-pip
