@@ -85,7 +85,7 @@ checkmarx-scan:
           --cx-team="${CX_TEAM}" 
           --cx-project="${CX_PROJECT}" 
           --spring.profiles.active="${CX_FLOW_ENABLED_VULNERABILITY_SCANNERS}" 
-          --f=. 
+          --f=/builds/CxFriese/flowgoat/. 
           ${PARAMS}
   after_script:
     - wget https://download.checkmarx.com/9.4.0_GA/Plugins/CxConsolePlugin-1.1.11.zip
