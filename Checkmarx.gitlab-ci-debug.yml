@@ -77,6 +77,7 @@ checkmarx-scan:
     CHECKMARX_INCREMENTAL: "false"
   before_script:
     - echo ${CX_FLOW_EXE}
+    - ls /builds/CxFriese/flowgoat
   script:
     - ${CX_FLOW_EXE}
           --scan 
