@@ -82,11 +82,11 @@ checkmarx-scan:
           --scan 
           --app="${CI_PROJECT_NAME}" 
           --namespace="${CI_PROJECT_NAMESPACE}" 
-          --repo-name="${CI_PROJECT_NAME}" 
-          --repo-url="${CI_REPOSITORY_URL}" 
+          #--repo-name="${CI_PROJECT_NAME}" 
+          #--repo-url="${CI_REPOSITORY_URL}" 
           --cx-team="${CX_TEAM}" 
           --cx-project="${CX_PROJECT}" 
-          --branch="${CI_COMMIT_BRANCH}"
+          #--branch="${CI_COMMIT_BRANCH}"
           --spring.profiles.active="${CX_FLOW_ENABLED_VULNERABILITY_SCANNERS}" 
           --f=. 
           ${PARAMS}
