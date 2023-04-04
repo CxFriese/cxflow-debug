@@ -84,6 +84,8 @@ checkmarx-scan:
           --scan 
           --app="${CI_PROJECT_NAME}" 
           --namespace="${CI_PROJECT_NAMESPACE}"
+          --repo-name="${CI_PROJECT_NAME}"
+          --branch="${CI_COMMIT_BRANCH}"
           --cx-team="${CX_TEAM}" 
           --cx-project="${CX_PROJECT}" 
           --spring.profiles.active="${CX_FLOW_ENABLED_VULNERABILITY_SCANNERS}" 
