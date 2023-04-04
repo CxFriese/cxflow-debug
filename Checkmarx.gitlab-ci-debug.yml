@@ -80,15 +80,15 @@ checkmarx-scan:
     - ls /builds/CxFriese/flowgoat
   script:
     - echo "Skipping CxSAST Scan"
-    #- ${CX_FLOW_EXE}
-          #--scan 
-          #--app="${CI_PROJECT_NAME}" 
-          #--namespace="${CI_PROJECT_NAMESPACE}"
-          #--cx-team="${CX_TEAM}" 
-          #--cx-project="${CX_PROJECT}" 
-          #--spring.profiles.active="${CX_FLOW_ENABLED_VULNERABILITY_SCANNERS}" 
-          #--f=/builds/CxFriese/flowgoat/. 
-          #${PARAMS}
+    - ${CX_FLOW_EXE}
+          --scan 
+          --app="${CI_PROJECT_NAME}" 
+          --namespace="${CI_PROJECT_NAMESPACE}"
+          --cx-team="${CX_TEAM}" 
+          --cx-project="${CX_PROJECT}" 
+          --spring.profiles.active="${CX_FLOW_ENABLED_VULNERABILITY_SCANNERS}" 
+          --f=/builds/CxFriese/flowgoat/. 
+          ${PARAMS}
   after_script:
     - wget https://download.checkmarx.com/9.4.0_GA/Plugins/CxConsolePlugin-1.1.11.zip
     - apk add py3-pip
