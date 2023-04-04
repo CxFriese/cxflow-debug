@@ -79,7 +79,6 @@ checkmarx-scan:
     - echo ${CX_FLOW_EXE}
     - ls /builds/CxFriese/flowgoat
   script:
-    - echo "Skipping CxSAST Scan"
     - ${CX_FLOW_EXE}
           --scan 
           --app="${CI_PROJECT_NAME}" 
